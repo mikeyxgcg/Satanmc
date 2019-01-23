@@ -17,7 +17,7 @@ client.on('ready', () => {
 
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = [`${client.guilds.size} Server`,' Premium Bot™ by n3k4a & Baron','Type -help |-support |-invite ',`${client.users.size} Members`,'-invite','By: n3k4a & Hosam | BaronTube'];
+    var setGame = [`${client.guilds.size} Server`,' SatanMC™ by   Friendly  & IM7mqDy','Type $help |$invite ',`${client.users.size} Members`,'$invite','By: Friendly & IM7mqDy | BaronTube'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -108,7 +108,7 @@ const x5bz4 = [
    '*** انتظر الجزء الثاني عندما يوصل البوت 100 سيرفر , ساعدنا في نشر البوت وادخل هذا السيرفر https://discord.gg/ZnPDHaA ***'
 ]
  client.on('message', message => {
- if (message.content.startsWith('-مريم')) {
+ if (message.content.startsWith('$مريم')) {
   var mariam= new Discord.RichEmbed()
   .setTitle("لعبة مريم ..")
   .setColor('RANDOM')
@@ -122,10 +122,10 @@ const x5bz4 = [
 
 
 
-var prefix = "-";
+var prefix = "$";
 
 client.on('message', message => {
-if (message.content === "-help") {
+if (message.content === "$help") {
     let pages = [`
 ***__وصف عن البوت__***
 **
@@ -360,7 +360,7 @@ if (message.content.startsWith(prefix + 'trans')) {
 
 const sWlc = {}
 client.on('message', message => {
-var prefix = "-";
+var prefix = "$";
 if(message.channel.type === "dm") return;
 if(message.author.bot) return;
   if(!sWlc[message.guild.id]) sWlc[message.guild.id] = {
@@ -459,7 +459,7 @@ client.on("guildMemberAdd", member => {
 
 client.on('message', async message =>{
   if (message.author.boss) return;
-	var prefix = "-";
+	var prefix = "$";
 
 if (!message.content.startsWith(prefix)) return;
 	let command = message.content.split(" ")[0];
@@ -518,18 +518,18 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES")) return m
  
 
 client.on("message", message => {
- if (message.content === "-invite") {
+ if (message.content === "$invite") {
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
-      .setFooter('© Premium Bot :heart: جميع الحقوق محفوظة 2018 لــبوت')
-      .addField('شكرا لك لاستخدامك ل بروميوم بوت', `https://modest-lewin-146a75.netlify.com`)
+      .setFooter('© SatanMC :heart: جميع الحقوق محفوظة 2018 لــبوت')
+      .addField('شكرا لك لاستخدامك ل ساتان ام سي', `https://discordapp.com/oauth2/authorize?client_id=537218845010821121&permissions=268435488&scope=bot`)
   message.author.send({embed});
 
  }
 }); 
 
 client.on('message',message =>{
-    var prefix = "-";
+    var prefix = "$";
     if(message.content.startsWith(prefix + 'top')) {
   message.guild.fetchInvites().then(i =>{
   var invites = [];
@@ -555,20 +555,6 @@ client.on('message',message =>{
    
     }
   });
-
-client.on("message", message => {
- if (message.content === "-support") {
-  const embed = new Discord.RichEmbed()
-      .setTitle('Click here')
-      .setURL(' https://discord.gg/ZnPDHaA ')
-      .setColor("RANDOM")
-      .setFooter('© Premium Bot :heart: جميع الحقوق محفوظة 2018 لــبوت')  
-      .addField('سيرفر الدعم الفني', ` https://discord.gg/ZnPDHaA  `)
-  message.author.send({embed});
-
- }
-});
-  
 
 var fs = require("fs");
 let profile = JSON.parse(fs.readFileSync("./profile.json", "utf8"))
@@ -671,7 +657,7 @@ mentionned.send(`:credit_card: | Transfer Receipt \`\`\`\`You have received ${ar
   
 
 client.on('message', message => {
-    if (message.content.startsWith("-bot")) {
+    if (message.content.startsWith("$bot")) {
     message.channel.send({
         embed: new Discord.RichEmbed()
             .setAuthor(client.user.username,client.user.avatarURL)
@@ -693,7 +679,7 @@ client.on('message', message => {
 });
 
 client.on('message',async message => {
-    var p = "-"
+    var Prefix = "$"
   function timeCon(time) {
   let days = Math.floor(time % 31536000 / 86400)
   let hours = Math.floor(time % 31536000 % 86400 / 3600)
@@ -742,7 +728,7 @@ client.on('message', message => {
     });
 
 
-var prefix = "-";
+var prefix = "$";
 
 client.on('message',async message => {
   var room;
@@ -825,7 +811,7 @@ client.on("guildDelete", guild => {
   client.channels.get("489944931868082177").send('** :purple_heart: Premium Bot  **``Kicked``:x:  From Server '+`** [ ${guild.name} ] **`+''+' The Owner Is ' +`**[ ${guild.owner.user.username} ]**` +'')
   });
 
-var prefix = "-";
+var prefix = "$";
 
 client.on('message', message => {
      if (message.author.bot) return;
@@ -870,7 +856,7 @@ if (message.content.startsWith(prefix + "uptime")) {
 }
 });
 
-var prefix = "-";
+var prefix = "$";
 
 client.on('message', message => {
      if(!message.channel.guild) return;
@@ -894,7 +880,7 @@ message.channel.send(embed)
 });
 
 client.on('message', message => {
-     if (message.content === "-ping") {
+     if (message.content === "$ping") {
       const embed = new Discord.RichEmbed()
  
   .setColor("#FF0000")
@@ -973,7 +959,7 @@ client.on('message',  (message) => {
 });
 
 client.on('message',  (message) => {
-        if(message.content.startsWith('-boom')) {
+        if(message.content.startsWith('$boom')) {
   let user = message.mentions.users.first();
   if (!user) {
 
@@ -1026,7 +1012,7 @@ client.on('message',  (message) => {
 
 
 client.on('message',  (message) => {
-        if(message.content.startsWith('-sad')) {
+        if(message.content.startsWith('$sad')) {
   let user = message.mentions.users.first();
   if (!user) {
 
@@ -1078,7 +1064,7 @@ client.on('message',  (message) => {
 });
 
 client.on('message',  (message) => {
-        if(message.content.startsWith('-hug')) {
+        if(message.content.startsWith('$hug')) {
   let user = message.mentions.users.first();
   if (!user) {
 
@@ -1134,7 +1120,7 @@ client.on('message',  (message) => {
 
 
 client.on('message',  (message) => {
-        if(message.content.startsWith('-kiss')) {
+        if(message.content.startsWith('$kiss')) {
   let user = message.mentions.users.first();
   if (!user) {
 
@@ -1189,7 +1175,7 @@ client.on('message',  (message) => {
 
 
 client.on('message',  (message) => {
-        if(message.content.startsWith('-miss')) {
+        if(message.content.startsWith('$miss')) {
   let user = message.mentions.users.first();
   if (!user) {
 
@@ -1244,7 +1230,7 @@ client.on('message',  (message) => {
 
 
 client.on('message',  (message) => {
-        if(message.content.startsWith('-love')) {
+        if(message.content.startsWith('$love')) {
   let user = message.mentions.users.first();
   if (!user) {
 
@@ -1298,7 +1284,7 @@ client.on('message',  (message) => {
 });
 
 
-   var prefix = "-";
+   var prefix = "$";
 
 var cats = [
 
@@ -1367,7 +1353,7 @@ message.channel.send("https://cdn.discordapp.com/attachments/486250425817890821/
 
 client.on("message", async message => {
             if(!message.channel.guild) return;
-            var prefix = "-";
+            var prefix = "$";
         if(message.content.startsWith(prefix + 'invites')) {
         var nul = 0
         var guild = message.guild
@@ -1429,7 +1415,7 @@ client.on("message", async message => {
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
 
-  let prefix = "-";
+  let prefix = "$";
   let messageArray = message.content.split (" ");
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
@@ -1504,7 +1490,7 @@ client.on("message", async message => {
         }
         });
 
-var prefix = "-"
+var prefix = "$"
 
 client.on('message', message => {
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
@@ -1525,7 +1511,7 @@ const command = args.shift().toLowerCase();
 
 
 client.on('message', message => {
-    if (message.content.startsWith("-avatar")) {
+    if (message.content.startsWith("$avatar")) {
         var mentionned = message.mentions.users.first();
     var x5bzm;
       if(mentionned){
@@ -1568,7 +1554,7 @@ if (command == "غرد") {
 
 
 client.on("message", message => {
-    var prefix = "-";
+    var prefix = "$";
  
             var args = message.content.substring(prefix.length).split(" ");
             if (message.content.startsWith(prefix - "clear")) {
@@ -1583,7 +1569,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "تم مسح الرسائل بنجاح",
         footer: {
-          text: "© Premium Bot ™."
+          text: "© SatanMC ™."
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -1629,7 +1615,7 @@ const cuttweet = [
 ]
 
 client.on('message', message => {
-  if (message.content === `-كت تويت`) {
+  if (message.content === `$كت تويت`) {
 message.channel.sendMessage({embed: {
   color: 3547003,
   description: `${cuttweet[Math.floor(Math.random() * cuttweet.length)]}`
@@ -1683,7 +1669,7 @@ message.channel.sendMessage({embed: {
  });//jackeo جاكيو
 
   client.on('message', message => {
-var prefix = "-";
+var prefix = "$";
 var cats = ["http://palestine-kitchen.ps/wp-content/uploads/2017/12/%D9%86%D9%83%D8%AA-%D8%AF%D8%A8%D8%A7%D9%86%D8%A9.png","http://www.i7lm.com/wp-content/uploads/2017/04/136769797816.jpg","https://4.bp.blogspot.com/-p62zmDIDXmI/WKzqNt9smaI/AAAAAAAAC4Q/sW_bSIB8OaQhwOYFeplc3uzz8PBN7l3YACEw/s1600/13602501135.jpg","https://www.universemagic.com/images/2016/03/7938-2-or-1457539273.jpg","https://1.bp.blogspot.com/-yFk-FzHSyE8/WR9fmPcsCUI/AAAAAAAAE6c/AmvjLadOiLY9GiCqMLHgA121bY2RS_dCwCLcB/s1600/%25D9%2586%25D9%2583%25D8%25AA%2B%25D9%2585%25D8%25B6%25D8%25AD%25D9%2583%25D8%25A9%2B1.jpg","https://l7zaat.com/wp-content/uploads/2018/02/423.jpg","https://www.petfinder.com/wp-content/uploads/2012/11/101438745-cat-conjunctivitis-causes.jpg","https://i.fatafeat.com/storage/attachments/15/image3_698123_large.jpg","http://www.shuuf.com/shof/uploads/2018/02/08/jpg/shof_97d686082bdb0a2.jpg"];
         var args = message.content.split(" ").slice(1);
     if(message.content.startsWith(prefix + 'نكت')) {
@@ -1696,8 +1682,8 @@ message.channel.sendEmbed(cat);
 
 client.on('message', async msg => {
      client.snek = require('snekfetch');
-    var p = "-"
-  if(msg.content.startsWith(p + "paint")) {
+    var Prefix = "$"
+  if(msg.content.startsWith(Prefix + "paint")) {
    let args = msg.content.split(' ').slice(1).join(' ');
 
  if(args.length < 1) return args.missing(msg, 'No text added', this.help);
@@ -1747,7 +1733,7 @@ if (message.content.startsWith('-ask')) {
 
 
 client.on('message', ra3d => {
-var prefix = "-";
+var prefix = "$";
                         let args = ra3d.content.split(" ").slice(1).join(" ")
 if(ra3d.content.startsWith(prefix + 'ccolors')) {
     if(!args) return ra3d.channel.send('`يرجي اختيار كم لون `');
@@ -1764,7 +1750,7 @@ if(ra3d.content.startsWith(prefix + 'ccolors')) {
        });
 
 client.on("message", function(message) {
-	var prefix = "-";
+	var prefix = "$";
    if(message.content.startsWith(prefix + "rps")) {
     let messageArgs = message.content.split(" ").slice(1).join(" ");
     let messageRPS = message.content.split(" ").slice(2).join(" ");
@@ -1806,7 +1792,7 @@ reaction3.on("collect", r => {
 
 
   client.on('message', message => {
-      if(message.content.startsWith ("-marry")) {
+      if(message.content.startsWith ("$marry")) {
       if(!message.channel.guild) return message.reply('** This command only for servers **')
       var proposed = message.mentions.members.first()
      
@@ -1838,7 +1824,7 @@ message.channel.awaitMessages(filte, { max: 1, time: 15000, errors: ['time'] })
 
 
   client.on('message', message => {
-if(message.content.startsWith("-slots")) {
+if(message.content.startsWith("$slots")) {
   let slot1 = ['🍏', '🍇', '🍒', '🍍', '🍅', '🍆', '🍑', '🍓'];
   let slots1 = `${slot1[Math.floor(Math.random() * slot1.length)]}`;
   let slots2 = `${slot1[Math.floor(Math.random() * slot1.length)]}`;
@@ -1854,7 +1840,7 @@ if(message.content.startsWith("-slots")) {
 });
 
 
-var prefix = "-";
+var prefix = "$";
 
 client.on('message', message => {
   if (message.author.bot) return;
@@ -1887,7 +1873,7 @@ if (command == "embed") {
 client.on('message',async msg => {
      if(msg.channel.type === "old") return;
   if(msg.author.bot) return;
-  var p = "-";
+  var p = "$";
   if(msg.content.startsWith(p + "setstats")) {
   if(!msg.guild.member(msg.author).hasPermissions('MANAGE_CHANNELS')) return msg.reply('? **go play minecraft**');
   if(!msg.guild.member(client.user).hasPermissions(['MANAGE_CHANNELS'])) return msg.reply('? **البوت لا يمتلك صلاحية**');
@@ -1984,7 +1970,7 @@ message.channel.send(embed500)
 }
 })
 
-var prefix = "-"
+var prefix = "$"
 
 client.on('message',async message => {
   if(message.content.startsWith(prefix + "id")) {
@@ -2009,7 +1995,7 @@ client.on('message',async message => {
     .addField('» مضى على دخولك الدسكورد', `${created.toFixed(0)} يومّا`,true)
     .addField('» مضى على دخولك السيرفر', `${joined.toFixed(0)} يومّا`,true)
     .addField('» دعوات',inviteCount,true)
-    .setFooter(' Premium Bot™ © | 2018.');
+    .setFooter(' SatanMC™ © | 2018.');
 
     message.channel.send(embed);
   });
@@ -2017,7 +2003,7 @@ client.on('message',async message => {
 });
   
 
-var prefix = "-"
+var prefix = "$"
 
 client.on('message', message => {
      if (message.content === (prefix + "help")) {
@@ -2031,7 +2017,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-	var prefix = "-";
+	var prefix = "$";
    if(!message.channel.guild) return;
 if(message.content.startsWith(prefix + 'clear')) {
 if(!message.channel.guild) return message.channel.send('**This Command is Just For Servers**').then(m => m.delete(5000));
@@ -2072,7 +2058,7 @@ msg.delete();
 });
 
 client.on("message", message => {
-    var prefix = "-";
+    var prefix = "$";
             var args = message.content.substring(prefix.length).split(" ");
             if (message.content.startsWith(prefix + "clear")) {
  if (!args[1]) {
@@ -2095,7 +2081,7 @@ client.on("message", message => {
 });
 
 client.on('message', message => {
-if (message.content.startsWith('-server')) {
+if (message.content.startsWith('$server')) {
  message.channel.send(`Here is the different information of **${message.guild.name}**`, {
         embed: {
             color: 0xDF9C9D,
@@ -2161,7 +2147,7 @@ if (message.content.startsWith('-server')) {
 
 
 
-  var prefix = "-";
+  var prefix = "$";
     client.on('message', message => {
     if(message.content.startsWith(prefix + '2avatar')) {
          var men = message.mentions.users.first();
