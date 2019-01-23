@@ -711,7 +711,7 @@ client.on('message',async message => {
 
 client.on('message', message => {
               if (!message.channel.guild) return;
-      if(message.content =='-members')
+      if(message.content =='$members')
       var kayan = new Discord.RichEmbed()
       .setThumbnail(message.author.avatarURL)
       .setFooter(message.author.username, message.author.avatarURL) 
@@ -959,7 +959,7 @@ client.on('message',  (message) => {
 });
 
 client.on('message',  (message) => {
-        if(message.content.startsWith('-boom')) {
+        if(message.content.startsWith('$boom')) {
   let user = message.mentions.users.first();
   if (!user) {
 
@@ -1230,7 +1230,7 @@ client.on('message',  (message) => {
 
 
 client.on('message',  (message) => {
-        if(message.content.startsWith('-love')) {
+        if(message.content.startsWith('$love')) {
   let user = message.mentions.users.first();
   if (!user) {
 
@@ -1353,7 +1353,7 @@ message.channel.send("https://cdn.discordapp.com/attachments/486250425817890821/
 
 client.on("message", async message => {
             if(!message.channel.guild) return;
-            var prefix = "-";
+            var prefix = "$";
         if(message.content.startsWith(prefix + 'invites')) {
         var nul = 0
         var guild = message.guild
@@ -1415,7 +1415,7 @@ client.on("message", async message => {
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
 
-  let prefix = "-";
+  let prefix = "$";
   let messageArray = message.content.split (" ");
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
@@ -1456,7 +1456,7 @@ client.on("message", async message => {
       if(message.author.bot) return;
       if(message.channel.type === "dm") return;
 
-      let prefix = "-";
+      let prefix = "$";
       let messageArray = message.content.split (" ");
       let cmd = messageArray[0];
       let args = messageArray.slice(1);
@@ -1490,7 +1490,7 @@ client.on("message", async message => {
         }
         });
 
-var prefix = "-"
+var prefix = "$"
 
 client.on('message', message => {
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
@@ -1511,7 +1511,7 @@ const command = args.shift().toLowerCase();
 
 
 client.on('message', message => {
-    if (message.content.startsWith("-avatar")) {
+    if (message.content.startsWith("$avatar")) {
         var mentionned = message.mentions.users.first();
     var x5bzm;
       if(mentionned){
@@ -1569,7 +1569,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "تم مسح الرسائل بنجاح",
         footer: {
-          text: "© Premium Bot ™."
+          text: "©SatanMC ™."
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -1615,7 +1615,7 @@ const cuttweet = [
 ]
 
 client.on('message', message => {
-  if (message.content === `-كت تويت`) {
+  if (message.content === `$كت تويت`) {
 message.channel.sendMessage({embed: {
   color: 3547003,
   description: `${cuttweet[Math.floor(Math.random() * cuttweet.length)]}`
@@ -1669,7 +1669,7 @@ message.channel.sendMessage({embed: {
  });//jackeo جاكيو
 
   client.on('message', message => {
-var prefix = "-";
+var prefix = "$";
 var cats = ["http://palestine-kitchen.ps/wp-content/uploads/2017/12/%D9%86%D9%83%D8%AA-%D8%AF%D8%A8%D8%A7%D9%86%D8%A9.png","http://www.i7lm.com/wp-content/uploads/2017/04/136769797816.jpg","https://4.bp.blogspot.com/-p62zmDIDXmI/WKzqNt9smaI/AAAAAAAAC4Q/sW_bSIB8OaQhwOYFeplc3uzz8PBN7l3YACEw/s1600/13602501135.jpg","https://www.universemagic.com/images/2016/03/7938-2-or-1457539273.jpg","https://1.bp.blogspot.com/-yFk-FzHSyE8/WR9fmPcsCUI/AAAAAAAAE6c/AmvjLadOiLY9GiCqMLHgA121bY2RS_dCwCLcB/s1600/%25D9%2586%25D9%2583%25D8%25AA%2B%25D9%2585%25D8%25B6%25D8%25AD%25D9%2583%25D8%25A9%2B1.jpg","https://l7zaat.com/wp-content/uploads/2018/02/423.jpg","https://www.petfinder.com/wp-content/uploads/2012/11/101438745-cat-conjunctivitis-causes.jpg","https://i.fatafeat.com/storage/attachments/15/image3_698123_large.jpg","http://www.shuuf.com/shof/uploads/2018/02/08/jpg/shof_97d686082bdb0a2.jpg"];
         var args = message.content.split(" ").slice(1);
     if(message.content.startsWith(prefix + 'نكت')) {
@@ -1682,7 +1682,7 @@ message.channel.sendEmbed(cat);
 
 client.on('message', async msg => {
      client.snek = require('snekfetch');
-    var p = "-"
+    var p = "$"
   if(msg.content.startsWith(p + "paint")) {
    let args = msg.content.split(' ').slice(1).join(' ');
 
@@ -1696,7 +1696,7 @@ client.on('message', async msg => {
 
  const fetch = require('snekfetch');
  client.on('message', message => {
-if (message.content.startsWith('-ask')) {
+if (message.content.startsWith('$ask')) {
       let args = message.content.split(' ').slice(1).join(' ');
     const hexcols = [0xFFB6C1, 0x4C84C0, 0xAD1A2C, 0x20B046, 0xF2E807, 0xF207D1, 0xEE8419];
     if (!args) {
@@ -1750,7 +1750,7 @@ if(ra3d.content.startsWith(prefix + 'ccolors')) {
        });
 
 client.on("message", function(message) {
-	var prefix = "-";
+	var prefix = "$";
    if(message.content.startsWith(prefix + "rps")) {
     let messageArgs = message.content.split(" ").slice(1).join(" ");
     let messageRPS = message.content.split(" ").slice(2).join(" ");
@@ -1792,7 +1792,7 @@ reaction3.on("collect", r => {
 
 
   client.on('message', message => {
-      if(message.content.startsWith ("-marry")) {
+      if(message.content.startsWith ("$marry")) {
       if(!message.channel.guild) return message.reply('** This command only for servers **')
       var proposed = message.mentions.members.first()
      
@@ -1824,7 +1824,7 @@ message.channel.awaitMessages(filte, { max: 1, time: 15000, errors: ['time'] })
 
 
   client.on('message', message => {
-if(message.content.startsWith("-slots")) {
+if(message.content.startsWith("$slots")) {
   let slot1 = ['🍏', '🍇', '🍒', '🍍', '🍅', '🍆', '🍑', '🍓'];
   let slots1 = `${slot1[Math.floor(Math.random() * slot1.length)]}`;
   let slots2 = `${slot1[Math.floor(Math.random() * slot1.length)]}`;
@@ -1852,7 +1852,7 @@ client.on('message', message => {
   let args = message.content.split(" ").slice(1);
 
 // -say
-  if (command === "$say") {
+  if (command === "say") {
           message.delete()
     message.channel.sendMessage(args.join(" ")).catch(console.error);
   }
@@ -2203,7 +2203,7 @@ client.on('message', function(message) {
 	const mess = message.content.toLowerCase();
 	const args = message.content.split(' ').slice(1).join(' ');
 
-	if (mess.startsWith('-play')) {
+	if (mess.startsWith('$play')) {
 		if (!message.member.voiceChannel) return message.reply(':x: **You have to be in a voice channel to use this command.**');
 		// if user is not insert the URL or song title
 		if (args.length == 0) {
@@ -2304,14 +2304,14 @@ client.on('message', function(message) {
 			});
 		}
 	}
-	else if (mess.startsWith('-skip')) {
+	else if (mess.startsWith('$skip')) {
 		message.reply(':gear: **تم التخطي**').then(() => {
 			skip_song(message);
 			var server = server = servers[message.guild.id];
 			if (message.guild.voiceConnection) message.guild.voiceConnection.end();
 		});
 	}
-	else if (message.content.startsWith('-vol')) {
+	else if (message.content.startsWith('$vol')) {
 		if (!message.member.voiceChannel) return message.reply(':x: **You have to be in a voice channel to use this command.**');
 		// console.log(args)
 		if (args > 100) return message.reply(':x: **100**');
