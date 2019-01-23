@@ -2574,7 +2574,7 @@ client.on("reachLimit", (limit)=> {
   });
 });
 
-lient.on('message', message => {
+client.on('message', message => {
 var prefix = "$";
        if(message.content === prefix + "cl") {
                            if(!message.channel.guild) return message.reply('** This command only for servers**');
