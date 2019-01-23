@@ -1700,7 +1700,7 @@ client.on('message', async msg => {
 
  const fetch = require('snekfetch');
  client.on('message', message => {
-if (message.content.startsWith('-ask')) {
+if (message.content.startsWith('$ask')) {
       let args = message.content.split(' ').slice(1).join(' ');
     const hexcols = [0xFFB6C1, 0x4C84C0, 0xAD1A2C, 0x20B046, 0xF2E807, 0xF207D1, 0xEE8419];
     if (!args) {
@@ -1999,7 +1999,7 @@ client.on('message',async message => {
     .addField('» مضى على دخولك الدسكورد', `${created.toFixed(0)} يومّا`,true)
     .addField('» مضى على دخولك السيرفر', `${joined.toFixed(0)} يومّا`,true)
     .addField('» دعوات',inviteCount,true)
-    .setFooter(' Premium Bot™ © | 2018.');
+    .setFooter(' SatanMC™ © | 2018.');
 
     message.channel.send(embed);
   });
@@ -2463,116 +2463,6 @@ client.on('message', function(message) {
 	}
 });
 })
-
-client.on('message',async message => {
-	  var prefix = "$"
-  if(message.author.bot || message.channel.type === 'dm') return;
-  let args = message.content.split(' ');
-  if(args[0] === `${prefix}bc`) {
-    if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send('⛔ | You dont have **ADMINISTRATOR** Permission!');
-    if(!args[1]) return message.channel.send('**➥ Useage:** ${prefix}bc message');
-  
-    let msgCount = 0;
-    let errorCount = 0;
-    let successCount = 0;
-    message.channel.send(`**- [ 🔖 :: ${msgCount} ] ・عدد الرسائل المرسلة**\n**- [ 📥 :: ${successCount} ] ・عدد الرسائل المستلمة**\n**- [ 📤 :: ${errorCount} ]・عدد الرسائل الغير مستلمة**`).then(msg => {
-      message.guild.members.forEach(g => {
-        g.send(args.slice(1).join(' ')).then(() => {
-          successCount++;
-          msgCount++;
-          msg.edit(`**- [ 🔖 :: ${msgCount} ] ・عدد الرسائل المرسلة**\n**- [ 📥 :: ${successCount} ] ・عدد الرسائل المستلمة**\n**- [ 📤 :: ${errorCount} ]・عدد الرسائل الغير مستلمة**`);
-        }).catch(e => {
-          errorCount++;
-          msgCount++;
-          msg.edit(`**- [ 🔖 :: ${msgCount} ] ・عدد الرسائل المرسلة**\n**- [ 📥 :: ${successCount} ] ・عدد الرسائل المستلمة**\n**- [ 📤 :: ${errorCount} ]・عدد الرسائل الغير مستلمة**`);
-        });
-      });
-    });
-  }
-});
-
-client.on('message', message => {
-	  var prefix = "$";
-    if (message.author.bot) return;
-     if (message.content === prefix + "email") {
-function randomem() {
-let email = '';
-const ReBeL = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789._"\'';
-for (let i = 0; i < 5; i++) email += ReBeL.charAt(Math.floor(Math.random() * ReBeL.length));
-return email;
-}
-function randompass() {
-let pass = '';
-const CoDeS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!?@#$%&()-_"\'';
-for (let i = 0; i < 8; i++) pass += CoDeS.charAt(Math.floor(Math.random() * CoDeS.length));
-return pass;
-}
-const random1 = randomem();
-const random2 = randompass();
-message.author.send(`------------------------
-email : **${random1}@gmail.com**
-password : **${random2}**
-------------------------`).catch(err => {
-   if(err == "DiscordAPIError: Cannot send messages to this user") {
-      return message.channel.send("**للأسف , لديك اعدادات خصوصية لاتسمح لي بأرسال رسائل خاصة لك **");
-}
-});
-
-message.channel.send("**تم الارسال الحساب في الخاص | ☑ **")
-}});
-
-var config = {
-  events: [
-    {type: "CHANNEL_CREATE", logType: "CHANNEL_CREATE", limit: 3 , delay: 3000},
-    {type: "CHANNEL_DELETE", logType: "CHANNEL_DELETE", limit: 2, delay: 3000},
-    {type: "GUILD_MEMBER_REMOVE", logType: "MEMBER_KICK", limit: 3, delay: 3000},
-    {type: "GUILD_BAN_ADD", logType: "MEMBER_BAN_ADD", limit: 3, delay: 3000}
-  ]
-}
-client.on("raw", (packet)=> {
-  let {t, d} = packet, type = t, {guild_id} = data = d || {};
-  if (type === "READY") {
-    client.startedTimestamp = new Date().getTime();
-    client.captures = [];
-  }
-  let event = config.events.find(anEvent => anEvent.type === type);
-  if (!event) return;
-  let guild = client.guilds.get(guild_id);
-  if (!guild) return;
-  guild.fetchAuditLogs({limit : 1, type: event.logType})
-    .then(eventAudit => {
-      let eventLog = eventAudit.entries.first();
-      if (!eventLog) return;
-      let executor = eventLog.executor;
-      guild.fetchAuditLogs({type: event.logType, user: executor})
-        .then((userAudit, index) => {
-          let uses = 0;
-          userAudit.entries.map(entry => {
-            if (entry.createdTimestamp > client.startedTimestamp && !client.captures.includes(entry.id)) uses += 1;
-          });
-          setTimeout(() => {
-            client.captures.push(index);
-          }, event.delay || 2000)
-          if (uses >= event.limit) {
-            client.emit("reachLimit", {
-              user: userAudit.entries.first().executor,
-              member: guild.members.get(executor.id),
-              guild: guild,
-              type: event.type,
-            })
-          }
-        }).catch(console.error)
-    }).catch(console.error)
-});
-client.on("reachLimit", (limit)=> {
-  let log = limit.guild.channels.find( channel => channel.name === "اسم الروم");
-  log.send(limit.user.username+"\ try to hack !! @everyone !!");
-  limit.guild.owner.send(limit.user.username+"\ حاول التهكير الحقق (!)")
-  limit.member.roles.map(role => {
-    limit.member.removeRole(role.id)
-    .catch(log.send)
-  });
-});
 
 client.on('message', message => {
 var prefix = "$";
