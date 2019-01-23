@@ -17,7 +17,6 @@ client.on('ready', () => {
 
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = [`${client.guilds.size} Server`,' SatanMC™ by Friendly & IM7mqDy ','Type -help |$support |$invite ',`{client.users.size} Members`,'$invite','By: Friendly & IM7mqDy'];
     var i = -1;
     var j = 0;
     setInterval(function (){
